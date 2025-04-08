@@ -4,6 +4,7 @@ const connectDB = require("./db"); // MongoDB connection
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes"); // Import User Routes
 const stressRoutes = require("./routes/stressRoutes"); // Import Stress Routes
+const UserResponse = require('./models/UserResponse');
 
 dotenv.config();
 connectDB();
