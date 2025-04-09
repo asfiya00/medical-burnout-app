@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stress Relief Dashboard</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 40px;
+
+        /* Patterned background */
+        background: linear-gradient(
+            135deg,
+            rgba(0, 49, 108, 0.9) 25%,
+            transparent 25%
+          ),
+          linear-gradient(225deg, rgba(0, 49, 108, 0.9) 25%, transparent 25%),
+          linear-gradient(45deg, rgba(0, 49, 108, 0.9) 25%, transparent 25%),
+          linear-gradient(315deg, rgba(0, 49, 108, 0.9) 25%, #002c6d 25%);
+        background-size: 80px 80px;
+        background-color: #014ba0;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 2.8em;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.4em;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 60px;
+      }
+
+      a {
+        color: #9fd8ff;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 220px);
+        gap: 50px;
+        justify-content: center;
+      }
+
+      .card {
+        background: white;
+        color: black;
+        padding: 35px 20px;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4em;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .emoji {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+      }
+
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Take a deep breathe.</h1>
+    <p>
+      <a href="#"
+        >Choose what works best for your peace,<br />your well-being starts
+        here.</a
+      >
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">🧘‍♀️</div>
+        De-Stress Tips
+      </div>
+      <div class="card">
+        <div class="emoji">🏋️</div>
+        Exercise
+      </div>
+      <div class="card">
+        <div class="emoji">🎮</div>
+        Games
+      </div>
+      <div class="card">
+        <div class="emoji">🎵</div>
+        Music
+      </div>
+    </div>
+  </body>
+</html>

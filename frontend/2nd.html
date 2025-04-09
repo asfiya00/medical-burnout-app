@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WellMedix Mood Tracker</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to bottom right, #2c809a, #c2f0fc, #d4fcf9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 90%;
+        max-width: 600px;
+      }
+
+      h2 {
+        color: #006666;
+      }
+
+      .quote {
+        font-style: italic;
+        color: #004d4d;
+        background-color: #d0f0f0;
+        padding: 12px;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
+
+      .mood-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 30px 0;
+      }
+
+      .mood-buttons button {
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        background-color: #009999;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .mood-buttons button:hover {
+        background-color: #007777;
+        transform: scale(1.05);
+      }
+
+      .mood-buttons button.active {
+        background-color: #004d4d;
+      }
+
+      .stress-level {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .circle {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        background-color: #e0f7fa;
+        color: #00796b;
+        font-size: 18px;
+        margin: 10px auto 30px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .next-button {
+        padding: 10px 30px;
+        font-size: 16px;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .next-button:hover {
+        background-color: #005b4f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Hello..<span style="color: #00796b">WellMedix</span> is always there for
+        you!!..
+      </h2>
+      <div class="quote">
+        “A happy life is built on a foundation of good health and a peaceful
+        mind.”
+      </div>
+
+      <h3>How is your mood today..??</h3>
+
+      <div class="mood-buttons">
+        <button data-stress="90">Stressful 😟</button>
+        <button data-stress="80">Very Bad 😫</button>
+        <button data-stress="70">Bad 😕</button>
+        <button data-stress="60">Boring 😐</button>
+        <button data-stress="20">Happy 😊</button>
+        <button data-stress="5">Peaceful 😌</button>
+      </div>
+
+      <div class="stress-level">Stress Level</div>
+      <div class="circle" id="stressCircle">--</div>
+
+      <button class="next-button">Next →</button>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll(".mood-buttons button");
+      const stressCircle = document.getElementById("stressCircle");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const stress = btn.getAttribute("data-stress");
+          stressCircle.textContent = stress + "%";
+        });
+      });
+    </script>
+  </body>
+</html>
