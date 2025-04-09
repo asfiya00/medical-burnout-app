@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #002d42, #005572);
+        color: white;
+        text-align: center;
+        padding: 50px;
+      }
+      .container {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        text-align: left;
+        margin: 10px 0 5px;
+        font-size: 16px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .signup-btn {
+        background-color: #99c2e0;
+        color: black;
+        font-weight: bold;
+      }
+      .signup-btn:hover {
+        background-color: #77a3c3;
+      }
+      .cancel-btn {
+        background: none;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .cancel-btn:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>SIGN UP</h2>
+      <form>
+        <label for="username">User Name:</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your username"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+
+        <div class="button-container">
+          <button type="submit" class="signup-btn">Sign Up</button>
+          <button type="button" class="cancel-btn" onclick="cancelSignup()">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function cancelSignup() {
+        alert("Signup canceled!");
+      }
+    </script>
+  </body>
+</html>

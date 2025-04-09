@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stress Relief Exercises</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: url("https://media.istockphoto.com/id/1281736074/vector/abstract-geometric-pattern-background.jpg?s=612x612&w=0&k=20&c=rTHAuJPGgbaGZCDh6PAoVkJr3mTvn5WppwDHAPfNgoU=")
+          no-repeat center center fixed;
+        background-size: cover;
+        color: #000;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        color: #000;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .card ul {
+        padding-left: 20px;
+      }
+
+      .card ul li {
+        margin-bottom: 6px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>EXERCISES</h1>
+      <div class="grid">
+        <div class="card">
+          <h3>Breathing & Relaxation</h3>
+          <ul>
+            <li>Inhale for 4 seconds</li>
+            <li>Exhale for 4 seconds</li>
+            <li>Hold for 4 seconds</li>
+            <li>Repeat for 1–4 minutes</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Mindfulness & Meditation</h3>
+          <ul>
+            <li>5-Minute Meditation: Focus on breath</li>
+            <li>Body Scan: Relax each muscle</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Visualization</h3>
+          <ul>
+            <li>Imagine a peaceful scene</li>
+            <li>Engage senses: sounds, smells</li>
+            <li>Breathe deeply for 5–10 min</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Relaxation Exercise</h3>
+          <ul>
+            <li>Tense muscles for 5 sec, release</li>
+            <li>Focus on full body relaxation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Stretching & Mobility</h3>
+          <ul>
+            <li>Neck Rolls: Clockwise + counter</li>
+            <li>Shoulder Shrugs: Hold for 3 sec</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Yoga – Child’s Pose</h3>
+          <ul>
+            <li>Sit on heels, extend arms</li>
+            <li>Forehead on floor, breathe</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Laughter Therapy</h3>
+          <ul>
+            <li>Fake smile & laugh</li>
+            <li>Watch funny videos</li>
+            <li>Recall happy memories</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quick Physical Activity</h3>
+          <ul>
+            <li>5-min Cardio: Jumping jacks, jog</li>
+            <li>Chair Squats: Up & down 1 min</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
