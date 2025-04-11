@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to Stress Management App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #d0f0fd, #e0f7fa);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .title {
+        font-size: 2.7rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #00796b;
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        width: 100%;
+      }
+
+      .nav a {
+        text-decoration: none;
+        background-color: #ffffff;
+        padding: 22px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        color: #004d40;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .nav a:hover {
+        background-color: #b2ebf2;
+        transform: translateY(-6px);
+      }
+
+      @media (max-width: 600px) {
+        .title {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Welcome to Your Stress Management Hub</div>
+
+    <div class="nav">
+      <a href="signup.html">Sign Up / Login</a>
+      <a href="2nd.html">Stress Tracker</a>
+      <a href="3rd.html">Relief Dashboard</a>
+      <a href="tips.html">Stress Relief Tips</a>
+      <a href="games.html">De-Stress Games</a>
+      <a href="music.html">Stress-Free Sounds</a>
+      <a href="ex.html">Exercise & Breathing</a>
+    </div>
+  </body>
+</html>
