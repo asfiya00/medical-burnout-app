@@ -72,11 +72,13 @@
   <body>
     <div class="container">
       <h2>SIGN UP</h2>
-      <form>
+      <form id="signupForm">
+        >
         <label for="username">User Name:</label>
         <input
           type="text"
           id="username"
+          autocomplete="username"
           placeholder="Enter your username"
           required
         />
@@ -85,6 +87,7 @@
         <input
           type="email"
           id="email"
+          autocomplete="email"
           placeholder="Enter your email"
           required
         />
@@ -93,6 +96,7 @@
         <input
           type="password"
           id="password"
+          autocomplete="new-password"
           placeholder="Enter your password"
           required
         />
@@ -105,40 +109,43 @@
         </div>
       </form>
     </div>
-
     <script>
-      async function handleSignup(event) {
-        event.preventDefault(); // Prevent page reload
-
-        const name = document.getElementById("username").value;
+      document.getElementById("signupForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+    
+        const name = document.getElementById("username").value; // ✅ changed from username → name
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-
+    
         try {
-          const response = await fetch(
-            "http://localhost:5000/api/auth/register",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, email, password }),
-            }
-          );
-
-          const data = await response.json();
-
-          if (response.ok) {
-            alert("Signup successful! 🎉");
-            // Redirect to login page or homepage
-            // window.location.href = "login.html";
+          const res = await fetch("http://localhost:5000/api/auth/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, password }), // ✅ send "name"
+          });
+    
+          const data = await res.json();
+          if (res.ok) {
+            alert("✅ Signup successful!");
+            console.log(data);
+            // Optional redirect: window.location.href = "login.html";
           } else {
-            alert("Error: " + data.message);
+            alert("❌ Signup failed: " + data.message);
           }
-        } catch (err) {
-          alert("Something went wrong: " + err.message);
+        } catch (error) {
+          console.error("❌ Signup error:", error);
+          alert("An error occurred. Please try again.");
         }
+      });
+    
+      function cancelSignup() {
+        // Optional: clear form or redirect
+        document.getElementById("signupForm").reset();
       }
     </script>
+    
+    
   </body>
 </html>
